@@ -1,0 +1,11 @@
+check_id,check_name,result,detail,severity
+RED-01,RED Approval Notice Present,PASS,RED APPROVAL REQUIRED div with red styling found in content,CRITICAL
+RED-02,No Insurance Affiliate Links,PASS,No insurance affiliate links found. Total links in content: 0. Insurance-related links: 0. None are monetized.,CRITICAL
+RED-03,No Monetized Comparison Content,PASS,"No insurance comparison tables, provider rankings, or price comparisons found. Content is methodology-only.",CRITICAL
+RED-04,Disclaimer Structure Complete,PASS,Present: financial-adviser-disclaimer; FCA-notice; no-advice-disclaimer; date-stamp. Missing: None. Affiliate disclosure intentionally absent (no affiliate links on this page).,HIGH
+RED-05,Methodology Summary Present,PASS,"Methodology sections found: Editorial Independence Statement, Regulatory Framework, Disclaimer Structure, Content Quality Standards, Approval Process, Source Attribution Requirements.",HIGH
+RED-06,No Specific Provider Recommendations,PASS,No specific insurance provider names found in content. Page is purely methodological.,HIGH
+RED-07,No Personalised Advice Language,PASS,No personalised advice language detected. Content correctly uses informational framing only.,HIGH
+RED-08,Approval Workflow Documented,PASS,Full 6-step approval process documented including human review requirement and business owner sign-off.,MEDIUM
+RED-09,Draft Status Confirmed,PASS,Page status: draft. Not published. Not indexable.,CRITICAL
+RED-VERDICT,Overall RED Gate Verdict,HOLD - Awaiting business owner approval,All 4/4 critical checks pass. 9/8 total checks pass. Page is correctly held in draft pending human review. NO action required until business owner explicitly approves.,CRITICAL

@@ -1,0 +1,6 @@
+channel,status,colour,auto_post_allowed,detail
+Facebook,DEGRADED,AMBER,YES (limited),"Token refreshed 2026-05-26. Page token valid. Auto-posting functional but monitoring for expiry. can_auto_post() returns True."
+Instagram,NOT CONNECTED,RED,NO,"No valid Instagram token. Auto-posting blocked by can_auto_post() returning False. Requires Instagram Business account + Facebook Graph API setup."
+TikTok,NOT CONNECTED,RED,NO,"No TikTok API credentials configured. Auto-posting blocked. Requires TikTok for Business developer account."
+Pinterest,NOT CONNECTED,RED,NO,"No Pinterest API credentials configured. Auto-posting blocked. Requires Pinterest Business account + API app."
+YouTube,NOT CONNECTED,RED,NO,"No YouTube API credentials configured. Auto-posting blocked. Requires YouTube Data API v3 + OAuth consent."

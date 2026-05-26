@@ -1,0 +1,10 @@
+data_source,connection_status,label,detail
+Google Search Console (GSC),NOT CONNECTED,N/A,"No credentials directory on agent server. No OAuth token file found. Code modules exist (google_data.py, google_token_health.py, gsc_ga4_ingestion.py) but no live API connection."
+Google Analytics 4 (GA4),NOT CONNECTED,N/A,"No GA4 credentials or token on agent server. Same as GSC - code ready but not connected."
+Traffic Forecasts,MODELLED FORECAST,MODELLED,"All traffic/growth projections are model-generated estimates based on keyword research data, not live GSC/GA4 data."
+Keyword Data,MODELLED FORECAST,MODELLED,"Keyword volumes and difficulty scores sourced from third-party estimates, not live GSC impression/click data."
+Authority Scores,ESTIMATED / PROXY SCORE,ESTIMATED,"Domain/topical authority scores are proxy calculations, not from any Google API."
+AI Search Scores,ESTIMATED / PROXY SCORE,ESTIMATED,"AI overview visibility, extractability, citation likelihood are all modelled estimates."
+Monetization Scores,ESTIMATED / PROXY SCORE,ESTIMATED,"Revenue potential, affiliate %, AOV are estimated from product category benchmarks."
+SERP Volatility,ESTIMATED / PROXY SCORE,ESTIMATED,"Volatility scores are modelled, not from live SERP monitoring."
+OAuth Token Monitor,NOT APPLICABLE,N/A,"Token health module exists but no token file to monitor. Will activate when GSC/GA4 credentials are provided."

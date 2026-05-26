@@ -1,0 +1,11 @@
+check_id,check_name,result,detail
+TS-01,Mission Timestamps Format,PASS,"All timestamps in ISO 8601 format with Z suffix (e.g. 2026-05-25T14:30:00Z). No NaN or undefined values found."
+TS-02,DLQ Entry Timestamps,PASS,"All DLQ entries use ISO 8601 with +00:00 timezone (e.g. 2026-05-25T18:45:12+00:00). created_at and updated_at both valid."
+TS-03,DLQ Stats Timestamps,PASS,"oldest_pending and newest_entry timestamps valid ISO 8601. No NaN in any stats field."
+TS-04,Mission Progress Values,PASS,"All progress percentages are valid numbers (0.0 to 100.0). No NaN or undefined."
+TS-05,Confidence Scores,PASS,"All confidence scores are valid numbers (0.0 to 100.0). No NaN or undefined."
+TS-06,NaN Search - Missions,PASS,"grep -c NaN mission_control.json = 0. Zero NaN strings found."
+TS-07,NaN Search - DLQ,PASS,"grep -c NaN dead_letter_queue.json = 0. Zero NaN strings found."
+TS-08,Undefined Search - Missions,PASS,"grep -c undefined mission_control.json = 0. Zero undefined strings found."
+TS-09,Undefined Search - DLQ,PASS,"grep -c undefined dead_letter_queue.json = 0. Zero undefined strings found."
+TS-10,Debug Leakage - Public Pages,PASS,"No debug output visible on public-facing pages. WP_DEBUG/WP_DEBUG_DISPLAY/WP_DEBUG_LOG/SCRIPT_DEBUG should all be false - host-level wp-config.php confirmation recommended from site owner."

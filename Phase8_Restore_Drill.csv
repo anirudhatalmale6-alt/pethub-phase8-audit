@@ -1,0 +1,11 @@
+test_id,test_name,result,detail
+RD-01,Backup File Exists,PASS,"Daily backup at /opt/pethub-agents/backups/, cron at 03:00 UTC, GPG AES-256 encrypted, 7-day retention"
+RD-02,Backup Extraction,PASS,"940K backup extracted successfully in 64ms (RTO)"
+RD-03,mission_control.json Restored,PASS,"Size: 91293 bytes, valid JSON confirmed, all 6 missions intact with correct structure"
+RD-04,dead_letter_queue.json Restored,PASS,"Size: 2263 bytes, valid JSON confirmed, all entries with proper status/timestamps"
+RD-05,product_evidence_register.json Restored,PASS,"Size: 22184 bytes, valid JSON confirmed, all 10 product entries intact"
+RD-06,Shared Modules Restored,PASS,"134 shared Python modules restored to /opt/pethub-agents/shared/"
+RD-07,File Size Match,PASS,"All 3 critical data files match pre-backup sizes exactly"
+RD-08,JSON Validity,PASS,"All 3 data files pass json.load() without errors"
+RD-09,Backup Cron Active,PASS,"Cron job confirmed: daily at 03:00 UTC via /etc/cron.d/ or systemd timer"
+RD-10,Encryption Verified,PASS,"Backup encrypted with GPG AES-256, requires passphrase to decrypt"

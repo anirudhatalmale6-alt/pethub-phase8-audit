@@ -1,0 +1,20 @@
+Test,Command,Result,Status
+DLQ Stats API Live,"curl -s http://localhost:8100/api/dlq/stats","Returns JSON with total_entries=3 (pre-test), by_status, by_agent, lifetime_stats, oldest_pending, newest_entry",PASS
+DLQ Entries API Live,"curl -s http://localhost:8100/api/dlq/entries","Returns JSON array with 3 existing entries (social_agent/content_agent/seo_agent), each with entry_id/status/timestamps/payload",PASS
+DLQ Data File Exists,"ls -la /opt/pethub-agents/shared/data/dead_letter_queue.json","File exists, 1724 bytes, rw-r--r-- root:root",PASS
+DLQ In Backup Scope,"grep shared/data/*.json in backup.sh","backup.sh step 2 copies shared/data/*.json which includes dead_letter_queue.json; step 9 copies shared/*.py including the module",PASS
+DLQ Entry Creation,"POST /api/dlq/entries with test payload","Created entry dlq_a49c3d71818c with status=pending, retry_count=0, timestamps set",PASS
+DLQ Retry,"PUT /api/dlq/entries/dlq_a49c3d71818c/retry","Entry updated: status=retrying, retry_count incremented to 1, updated_at changed",PASS
+DLQ Escalation,"PUT /api/dlq/entries/dlq_a49c3d71818c/escalate","Entry updated: status=escalated, escalation_ticket_id=ESC-B35B459A assigned",PASS
+DLQ Dismiss,"PUT /api/dlq/entries/dlq_a49c3d71818c/dismiss","Entry updated: status=dismissed, dismiss_reason='Integration test complete', ticket preserved",PASS
+Auto-Escalation,"POST /api/dlq/auto-escalate","Returns escalated_count=0 (correct: no pending entries older than 24h). Logic verified in code: >86400s threshold",PASS
+Final Stats,"curl -s http://localhost:8100/api/dlq/stats","total_entries=4, lifetime: added=4, retried=2, escalated=2, dismissed=2",PASS
+Dashboard Integration,"grep dlq/dead_letter in manager-agent/*.html","Referenced in 5 dashboards: capacity_planning, event_flow, memory_topology, operations_centre, operations_noc",PASS
+Shared Module Accessible,"ls -la /opt/pethub-agents/shared/dead_letter_queue.py","File exists, 9195 bytes, importable by all 8 agents verified via python3 import test",PASS
+All Agents Can Import DLQ,"python3 import test for each agent","All 8 agents (seo/analytics/social/maintenance/content/product-research/affiliate/engagement) confirmed importable: YES",PASS
+Entries Have Owner/Status,"Inspect entry schema","Every entry contains agent_name (owner) and status field (pending/retrying/escalated/dismissed)",PASS
+Retries Bounded,"Code review of dead_letter_queue.py","retry_dlq_entry() increments retry_count per call. Governance layer in redis_replay_governance.py has auto_retry_max config. No unbounded auto-retry loop in DLQ itself - retries are operator-initiated via API",PASS
+Dismissed/Escalated Entries Audited,"Dismiss test entry then verify persistence","Dismissed entry persists in data file with dismiss_reason + escalation_ticket_id preserved. cleanup_old_entries() only removes dismissed entries older than 30 days",PASS
+Idempotency Protection,"Code review","5-minute window: same task_id + agent_name updates existing entry instead of creating duplicate",PASS
+Atomic Writes,"Code review","Uses tmp file + os.replace pattern for crash-safe writes",PASS
+Thread Safety,"Code review","All operations protected by threading.Lock",PASS

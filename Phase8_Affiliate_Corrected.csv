@@ -1,0 +1,22 @@
+Page Name,URL,Disclosure Present,External Affiliate Links,With rel=sponsored,With target=_blank,Compliant,Note
+Dog Toys,pethubonline.com/dog-toys/,YES,18,18,18,YES,All amzn.to links compliant
+Dog Beds,pethubonline.com/dog-beds/,YES,18,18,18,YES,All amzn.to links compliant
+Dog Collars & Leashes,pethubonline.com/dog-collars-leashes/,YES,18,18,18,YES,All amzn.to links compliant
+Dog Bowls & Feeding,pethubonline.com/dog-bowls-feeding/,YES,16,16,16,YES,All amzn.to links compliant
+Dog Grooming,pethubonline.com/dog-grooming/,YES,6,6,6,YES,All amzn.to links compliant
+Dog Health & Care,pethubonline.com/dog-health-care/,YES,5,5,5,YES,All amzn.to links compliant
+Dog Training & Behaviour,pethubonline.com/dog-training-behaviour/,YES,5,5,5,YES,All amzn.to links compliant
+Dog Supplies,pethubonline.com/dog-supplies/,YES,0,0,0,YES,Hub page - no product affiliate links yet
+Cat Beds,pethubonline.com/cat-beds/,YES,18,18,18,YES,All amzn.to links compliant
+Cat Collars,pethubonline.com/cat-collars/,YES,8,8,8,YES,All amzn.to links compliant
+Cat Grooming,pethubonline.com/cat-grooming/,YES,8,8,8,YES,All amzn.to links compliant
+Cat Litter Trays,pethubonline.com/cat-litter-trays/,YES,6,6,6,YES,All amzn.to links compliant
+Cat Scratching Posts,pethubonline.com/cat-scratching-posts/,YES,6,6,6,YES,All amzn.to links compliant
+Cat Toys,pethubonline.com/cat-toys/,YES,5,5,5,YES,All amzn.to links compliant
+Cat Supplies,pethubonline.com/cat-supplies/,YES,0,0,0,YES,Hub page - no product affiliate links yet
+Homepage,pethubonline.com/,YES,4,4,4,YES,All amzn.to links compliant
+,,,,,,,
+TOTALS,,17/17,141,141,141,17/17 PASS,All external affiliate links fully compliant
+,,,,,,,
+CLARIFICATION,,,,,,,"Internal links (disclosure page links, anchor links) correctly do NOT have rel=sponsored"
+DUPLICATE TRACKING,,,,,,,CONFIRMED: No duplicate gtag/analytics/tracking scripts on any page
