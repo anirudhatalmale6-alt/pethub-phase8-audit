@@ -1,0 +1,56 @@
+#,Question,Expected Command,Matched Command,Confidence,Passed,Answer
+1,show active missions,list_missions,list_missions,0.95,YES,"There are 6 missions:
+[ACTIVE] Dog Food Authority Expansion (priority: high, progress: 0.0%, confidence: 78.5%)
+[ACTIVE] Dog Harness Commercial Opportunity (priority: high, progress: 12.0%, confidence: 72.3%)
+[ACTIVE] Pet Insurance Trust Buildout (priority: high, progress: 12.0%, confidence: 55.0%)
+"
+2,what mission matters most,highest_priority,highest_priority,0.92,YES,"The highest priority mission is 'Dog Food Authority Expansion' (priority: high, confidence: 78.5%, progress: 0.0%).
+Next action: Finalise hub page outline and begin drafting Best Dry Dog Food UK page with full evidence methodology."
+3,what should we publish next,next_publish,next_publish,0.9,YES,"Next to publish: 'Dog Insurance UK Brief'
+Mission: Pet Insurance Trust Buildout
+Type: content_brief, Priority: critical, Confidence: 91.7%
+Assigned to: social_agent"
+4,what is blocking dog food,blockers,blockers,0.85,YES,"Blockers for 'Dog Food Authority Expansion':
+  - Milestone pending: Hub page research & outline approved (status: pending)
+  - Milestone pending: Core comparison pages drafted (dry, wet, puppy, senior) (status: pending)
+  - Milestone pending: Evidence & testing methodology documented (status: pendin"
+5,what content does pet insurance need,content_needs,content_needs,0.88,YES,"Content needed for 'Pet Insurance Trust Buildout':
+
+Content Assets (6):
+  - Pet Insurance Hub
+  - What Pet Insurance Covers
+  - Dog Insurance UK
+  - Cat Insurance UK
+  - Pet Insurance Comparison Guide
+  - Trust and Disclaimer Structure
+
+Evidence Assets (4):
+  - FCA compliance checklist
+  - Disclaime"
+6,what has improved,progress,progress,0.93,YES,"Progress across 6 missions:
+Average progress: 11.8%
+Average confidence: 65.2%
+
+  Dog Food Authority Expansion: 0.0% complete (confidence: 78.5%, phase: planning)
+  Dog Harness Commercial Opportunity: 12.0% complete (confidence: 72.3%, phase: planning)
+  Pet Insurance Trust Buildout: 12.0% complete ("
+7,highest ROI,highest_roi,highest_roi,0.88,YES,"Highest ROI mission: 'Dog Food Authority Expansion'
+Expected impact: Projected 35% organic traffic increase to dog food cluster within 6 months, establishing dominant topical authority and driving consistent affiliate revenue.
+Confidence: 78.5%, Risk: medium
+Status: active, Progress: 0.0%"
+8,highest risk,highest_risk,highest_risk,0.9,YES,"Highest risk mission: 'Pet Insurance Trust Buildout'
+Risk level: high
+Approval status: red_flag
+Confidence: 55.0%
+Next action: Await red-flag approval from business owner before proceeding."
+9,create action plan,action_plan,action_plan,0.91,YES,"Prioritised Action Plan:
+  1. [HIGH] Dog Food Authority Expansion: Finalise hub page outline and begin drafting Best Dry Dog Food UK page with full evidence methodology.
+  2. [HIGH] Dog Harness Commercial Opportunity: Complete keyword gap analysis and draft hub page structure.
+  3. [HIGH] Pet Insura"
+10,summarize mission progress,summarize,progress,0.93,YES,"Progress across 6 missions:
+Average progress: 11.8%
+Average confidence: 65.2%
+
+  Dog Food Authority Expansion: 0.0% complete (confidence: 78.5%, phase: planning)
+  Dog Harness Commercial Opportunity: 12.0% complete (confidence: 72.3%, phase: planning)
+  Pet Insurance Trust Buildout: 12.0% complete ("

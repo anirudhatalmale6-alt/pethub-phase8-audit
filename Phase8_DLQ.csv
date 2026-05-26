@@ -1,0 +1,20 @@
+Category,Item,Value
+Status,Total Entries,3
+Status,Pending,1
+Status,Escalated,1
+Status,Dismissed,1
+Agent,seo_agent,1
+Agent,content_agent,1
+Agent,social_agent,1
+Lifetime,Total Added,3
+Lifetime,Total Retried,1
+Lifetime,Total Escalated,1
+Lifetime,Total Dismissed,1
+Endpoint,GET /api/dlq/entries,List entries
+Endpoint,GET /api/dlq/entries/{id},Get single entry
+Endpoint,POST /api/dlq/entries,Add failed task
+Endpoint,PUT /api/dlq/entries/{id}/retry,Mark for retry
+Endpoint,PUT /api/dlq/entries/{id}/dismiss,Dismiss with reason
+Endpoint,PUT /api/dlq/entries/{id}/escalate,Escalate
+Endpoint,GET /api/dlq/stats,Summary statistics
+Endpoint,POST /api/dlq/auto-escalate,Auto-escalate > 24h
