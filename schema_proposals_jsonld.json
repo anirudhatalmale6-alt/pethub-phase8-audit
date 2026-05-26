@@ -1,167 +1,403 @@
 {
-  "hub_3715": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Best Dog Food UK 2026 - Complete Guide & Honest Reviews",
-      "datePublished": "2026-05-26",
-      "dateModified": "2026-05-26",
-      "author": {
-        "@type": "Organization",
-        "name": "Pet Hub Online",
-        "url": "https://pethubonline.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Pet Hub Online",
-        "url": "https://pethubonline.com"
-      },
-      "description": "Complete guide to the best dog food in the UK for 2026.",
-      "mainEntityOfPage": "https://pethubonline.com/best-dog-food-uk/"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+  "export_timestamp": "2026-05-26T21:20:25Z",
+  "deployment_status": "PROPOSAL ONLY - NOT DEPLOYED TO ANY PAGE",
+  "safety_note": "No Product, AggregateRating, Review, Offer, price, or stock schema included",
+  "seo_metadata_note": "SEO metadata (title, description, focus keyword, OG, Twitter) deployed to draft posts via RankMath. JSON-LD schemas are PROPOSAL ONLY and NOT deployed.",
+  "schemas": {
+    "3836": {
+      "post_id": 3836,
+      "post_title": "Best Dog Food UK (2026) - Complete Guide & Honest Reviews",
+      "slug": "best-dog-food-uk",
+      "status": "PROPOSAL ONLY - NOT DEPLOYED",
+      "schema_types": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "excluded_types": [
+        "Product",
+        "AggregateRating",
+        "Review",
+        "Offer"
+      ],
+      "json_ld": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://pethubonline.com/"
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Best Dog Food UK (2026) - Complete Guide & Honest Reviews",
+          "url": "https://pethubonline.com/best-dog-food-uk/",
+          "author": {
+            "@type": "Organization",
+            "name": "PetHub Online",
+            "url": "https://pethubonline.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "PetHub Online",
+            "url": "https://pethubonline.com"
+          },
+          "datePublished": "2026-05-26",
+          "dateModified": "2026-05-26",
+          "description": "Evidence-based guide to the best dog food in the UK for 2026. Covers dry, wet, raw and fresh options with honest reviews, feeding charts, ingredient analysis and pricing.",
+          "inLanguage": "en-GB"
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Dog Supplies",
-          "item": "https://pethubonline.com/dog-supplies/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Best Dog Food UK"
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pethubonline.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Dog Food",
+              "item": "https://pethubonline.com/best-dog-food-uk/"
+            }
+          ]
         }
-      ]
+      ],
+      "faq_count": 0
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
+    "3837": {
+      "post_id": 3837,
+      "post_title": "Best Dry Dog Food UK (2026) - Evidence-Based Guide",
+      "slug": "best-dry-dog-food-uk",
+      "status": "PROPOSAL ONLY - NOT DEPLOYED",
+      "schema_types": [
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "excluded_types": [
+        "Product",
+        "AggregateRating",
+        "Review",
+        "Offer"
+      ],
+      "json_ld": [
         {
-          "@type": "ListItem",
-          "position": 1,
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Best Dry Dog Food UK (2026) - Evidence-Based Guide",
           "url": "https://pethubonline.com/best-dry-dog-food-uk/",
-          "name": "Best Dry Dog Food UK"
+          "author": {
+            "@type": "Organization",
+            "name": "PetHub Online",
+            "url": "https://pethubonline.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "PetHub Online",
+            "url": "https://pethubonline.com"
+          },
+          "datePublished": "2026-05-26",
+          "dateModified": "2026-05-26",
+          "description": "Comprehensive guide to dry dog food in the UK. Compare kibble types, FEDIAF standards, feeding amounts, storage tips and quality indicators.",
+          "inLanguage": "en-GB"
         },
         {
-          "@type": "ListItem",
-          "position": 2,
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pethubonline.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Dog Food",
+              "item": "https://pethubonline.com/best-dog-food-uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Best Dry Dog Food UK",
+              "item": "https://pethubonline.com/best-dry-dog-food-uk/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is dry dog food enough on its own?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if labelled 'complete.' FEDIAF-compliant complete dry food contains all nutrients a healthy adult dog needs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I soak dry dog food?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Soaking helps puppies transitioning from weaning, dogs with dental problems, and elderly dogs. For healthy adults, soaking is preference not necessity."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I know if my dog's food is good quality?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Look for: named meat first ingredient, protein above 25% dry matter, no artificial colours, clear ingredient list with percentages, and 'complete' labelling."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is expensive dog food always better?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not necessarily. Price reflects manufacturing costs, sourcing, marketing and brand positioning. Judge by ingredient list and guaranteed analysis, not price tag."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I feed my dog the same food forever?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No nutritional requirement to rotate if your dog thrives on a complete diet. Some suggest occasional variety to broaden nutrient intake."
+              }
+            }
+          ]
+        }
+      ],
+      "faq_count": 5
+    },
+    "3838": {
+      "post_id": 3838,
+      "post_title": "Dry vs Wet Dog Food UK - An Honest Comparison",
+      "slug": "dry-vs-wet-dog-food-uk",
+      "status": "PROPOSAL ONLY - NOT DEPLOYED",
+      "schema_types": [
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "excluded_types": [
+        "Product",
+        "AggregateRating",
+        "Review",
+        "Offer"
+      ],
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Dry vs Wet Dog Food UK - An Honest Comparison",
           "url": "https://pethubonline.com/dry-vs-wet-dog-food-uk/",
-          "name": "Dry vs Wet Dog Food UK"
+          "author": {
+            "@type": "Organization",
+            "name": "PetHub Online",
+            "url": "https://pethubonline.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "PetHub Online",
+            "url": "https://pethubonline.com"
+          },
+          "datePublished": "2026-05-26",
+          "dateModified": "2026-05-26",
+          "description": "Honest comparison of dry vs wet dog food for UK dogs. Nutritional analysis, cost breakdown, mixed feeding ratios and situation-based recommendations.",
+          "inLanguage": "en-GB"
         },
         {
-          "@type": "ListItem",
-          "position": 3,
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pethubonline.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Dog Food",
+              "item": "https://pethubonline.com/best-dog-food-uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Dry vs Wet Dog Food UK",
+              "item": "https://pethubonline.com/dry-vs-wet-dog-food-uk/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can I switch between dry and wet food?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, but transition gradually over 7-10 days to avoid digestive upset."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is dry food bad for dogs with kidney problems?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not necessarily bad, but dogs with kidney issues benefit from increased water intake. Wet food provides this naturally. Follow veterinary dietary advice."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "My dog only wants wet food. Is that OK?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, as long as it is labelled 'complete' and meets FEDIAF standards. Main consideration is cost and dental health."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does dry food really clean teeth?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Chewing action can modestly reduce plaque, but is not a substitute for dental care. VOHC-approved dental diets have clinical evidence."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does it cost to feed a dog in the UK?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Budget dry: 1.00-2.00 GBP/day. Mid-range dry: 2.00-3.50 GBP/day. Premium wet: 3.00-6.00 GBP/day. Mixed feeding: 2.50-4.50 GBP/day."
+              }
+            }
+          ]
+        }
+      ],
+      "faq_count": 5
+    },
+    "3839": {
+      "post_id": 3839,
+      "post_title": "Best Puppy Food UK (2026) - Growth-Stage Nutrition Guide",
+      "slug": "best-puppy-food-uk",
+      "status": "PROPOSAL ONLY - NOT DEPLOYED",
+      "schema_types": [
+        "Article",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "excluded_types": [
+        "Product",
+        "AggregateRating",
+        "Review",
+        "Offer"
+      ],
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Best Puppy Food UK (2026) - Growth-Stage Nutrition Guide",
           "url": "https://pethubonline.com/best-puppy-food-uk/",
-          "name": "Best Puppy Food UK"
+          "author": {
+            "@type": "Organization",
+            "name": "PetHub Online",
+            "url": "https://pethubonline.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "PetHub Online",
+            "url": "https://pethubonline.com"
+          },
+          "datePublished": "2026-05-26",
+          "dateModified": "2026-05-26",
+          "description": "Complete guide to feeding puppies in the UK. Age-based schedules, FEDIAF nutrient requirements, portion charts, transition timelines and large breed considerations.",
+          "inLanguage": "en-GB"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pethubonline.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Dog Food",
+              "item": "https://pethubonline.com/best-dog-food-uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Best Puppy Food UK",
+              "item": "https://pethubonline.com/best-puppy-food-uk/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How often should I feed my puppy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "6-12 weeks: 4 meals/day. 3-6 months: 3 meals/day. 6-12 months: 2 meals/day. After 12 months: 1-2 meals/day."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When should I switch from puppy to adult food?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Small breeds: 9-12 months. Medium breeds: 12-14 months. Large breeds: 14-18 months. Giant breeds: 18-24 months."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I feed my puppy adult dog food?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not recommended. Puppy food has higher protein, fat, calcium and DHA for growth. Adult food may not support proper development."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much should I feed my puppy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Follow manufacturer guidelines based on expected adult weight. Adjust based on body condition score. Overfeeding is more common than underfeeding."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is raw food safe for puppies?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Raw feeding for puppies is controversial. Puppies have developing immune systems. If choosing raw, ensure it meets FEDIAF puppy standards and consult your vet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do large breed puppies need special food?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Large breed puppy food has controlled calcium (0.8-1.2%) and energy density to prevent rapid growth which can cause skeletal problems."
+              }
+            }
+          ]
         }
-      ]
+      ],
+      "faq_count": 6
     }
-  ],
-  "dry_3717": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Best Dry Dog Food UK 2026 - Evidence-Based Guide",
-      "datePublished": "2026-05-26",
-      "dateModified": "2026-05-26",
-      "author": {
-        "@type": "Organization",
-        "name": "Pet Hub Online",
-        "url": "https://pethubonline.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Pet Hub Online",
-        "url": "https://pethubonline.com"
-      },
-      "description": "Evidence-based guide to UK dry dog food.",
-      "mainEntityOfPage": "https://pethubonline.com/best-dry-dog-food-uk/"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://pethubonline.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Dog Supplies",
-          "item": "https://pethubonline.com/dog-supplies/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Best Dog Food UK",
-          "item": "https://pethubonline.com/best-dog-food-uk/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Best Dry Dog Food UK"
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is dry dog food enough on its own?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, if the food is labelled 'complete.' FEDIAF-compliant complete dry food contains all the nutrients a healthy adult dog needs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I soak dry dog food?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Soaking is helpful for puppies transitioning from weaning, dogs with dental problems, and elderly dogs. For healthy adults, soaking is a preference."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I know if my dog's food is good quality?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Look for named meat as first ingredient, protein above 25% dry matter, no artificial colours, clear ingredient list with percentages, and 'complete' labelling."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is expensive dog food always better?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not necessarily. Price reflects manufacturing, sourcing, marketing, and brand positioning. Some mid-range foods offer excellent nutritional profiles."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I feed my dog the same food forever?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "There is no nutritional requirement to rotate foods if your dog is thriving on a complete diet."
-          }
-        }
-      ]
-    }
-  ],
-  "note": "DryVsWet 3719 and Puppy 3720 follow same Article+BreadcrumbList+FAQPage pattern"
+  }
 }

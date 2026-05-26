@@ -1,0 +1,75 @@
+{
+  "export_timestamp": "2026-05-26T21:20:25Z",
+  "source": "LIVE SERVER - 167.99.198.145",
+  "data_label": "LIVE DATA",
+  "copilot_intelligence": {
+    "thinking_log": [
+      {
+        "thinking_id": "0171d0c45d910bd3",
+        "agent_name": "seo",
+        "action": "optimize_cluster",
+        "trigger": "low_coverage_detected",
+        "confidence": 82,
+        "alternatives_considered": [
+          {
+            "option": "ignore",
+            "score": 20,
+            "reason_rejected": "missed opportunity"
+          }
+        ],
+        "chosen_reason": "High ROI cluster with 30% gap",
+        "business_impact": "high",
+        "operational_risk": "low",
+        "next_intended_action": "generate_brief",
+        "timestamp": "2026-05-24T20:37:03.510561+00:00"
+      }
+    ],
+    "communication_feed": [
+      {
+        "message_id": "ac04543713a869ba",
+        "from_agent": "seo",
+        "to_agent": "content",
+        "message_type": "orchestration",
+        "content": "Generate article for dog food cluster",
+        "priority": "high",
+        "acknowledged": false,
+        "response": null,
+        "timestamp": "2026-05-24T20:37:03.572888+00:00"
+      }
+    ],
+    "ai_operations": {
+      "status": "operational",
+      "fallback_active": false,
+      "token_usage": [],
+      "latency_samples": [],
+      "model_routing": "gpt-4o",
+      "degraded_mode_reason": null
+    },
+    "event_flows": [
+      {
+        "event_id": "test-evt-001",
+        "stages": [
+          {
+            "stage": "emitted",
+            "agent": "seo",
+            "timestamp": "2026-05-24T20:37:20.212880+00:00",
+            "details": "Content gap detected"
+          }
+        ],
+        "started": "2026-05-24T20:37:20.212880+00:00"
+      }
+    ],
+    "memory_influences": [
+      {
+        "decision_id": "test-dec-001",
+        "memory_ids": [
+          "mem-safety-rule",
+          "mem-brand-voice"
+        ],
+        "influence_weight": 0.85,
+        "timestamp": "2026-05-24T20:37:20.322019+00:00"
+      }
+    ]
+  },
+  "recent_responses": []
+}
