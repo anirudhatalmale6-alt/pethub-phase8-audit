@@ -1,0 +1,53 @@
+section,check,result,severity,detail,location,fix_status
+1-Mission Control,6/6 missions exist,PASS,OK,"All 6 missions active: Dog Food Authority, Dog Harness Commercial, Pet Insurance Trust, Cat Toys Recovery, Homepage Engagement, AI Search Adaptation",API: /api/mission-control/missions,N/A
+1-Mission Control,Pet Insurance target_cluster = pet_insurance,PASS (FIXED),CRITICAL,"Was pet_supplements - corrected to pet_insurance in mission_control.json",mission_control.json > mis_pet_insurance_trust > target_cluster,Fixed this session
+1-Mission Control,65 backlog items visible,PASS,OK,"65 items confirmed via /api/mission-control/backlog",API: /api/mission-control/backlog,N/A
+1-Mission Control,Backlog synced to WP draft IDs,FAIL,MEDIUM,"0/65 backlog items have wp_draft_id field populated. Drafts exist in WP (3715/3717/3719/3720/3722) but backlog entries not linked.",API: /api/mission-control/backlog - wp_draft_id field,Needs fix
+1-Mission Control,Dog Food drafts show preview URLs,FAIL,MEDIUM,"No preview_url in backlog entries. WP preview URLs exist (e.g. ?page_id=3715) but not synced to backlog data.",API: /api/mission-control/backlog - preview_url field,Needs fix
+1-Mission Control,Missions show progress/confidence/labels,PASS,OK,"All missions show: progress_pct, confidence_pct, data_source_label (MODELLED FORECAST), data_maturity, last_validation_date, responsible_agents, milestones, next_recommended_action",API: /api/mission-control/missions,N/A
+2-Dog Food,4 drafts exist in WP,PASS,OK,"Pages 3715 (Hub 3936w), 3717 (Dry 338w), 3719 (DryVsWet 310w), 3720 (Puppy 306w) all confirmed draft status",WordPress REST API,N/A
+2-Dog Food,Draft IDs and preview URLs visible,FAIL,MEDIUM,"Draft IDs exist in WP but NOT linked in mission backlog or mission data. No preview_url field in backlog items.",Mission Control backlog,Needs sync script
+2-Dog Food,Product Evidence linked to register,PASS,OK,"10 entries in register, all linked to draft page IDs (3715/3717/3719/3720)",/opt/pethub-agents/shared/data/product_evidence_register.json,N/A
+2-Dog Food,Content QA scores visible,PASS,OK,"QA scores: Hub 10/10, Dry 6/10, DryVsWet 7/10, Puppy 7/10. All pass filler/fake checks.",Phase8_Draft_QA.csv,N/A
+2-Dog Food,Metadata/schema/linking proposals visible,PASS,OK,"Schema proposals: Hub (Article+ItemList+FAQPage+BreadcrumbList), others (Article+BreadcrumbList). Internal linking proposals documented.",schema_proposals.json + Phase8_Draft_QA.csv,N/A
+3-Pet Insurance,RED gated,PASS,OK,"approval_status = red_flag confirmed. Next action: Await red-flag approval from business owner.",API: /api/mission-control/missions,N/A
+3-Pet Insurance,Target cluster = pet_insurance,PASS (FIXED),CRITICAL,"Was pet_supplements - now corrected to pet_insurance",mission_control.json,Fixed this session
+3-Pet Insurance,Methodology/trust draft exists,PASS,OK,"Page 3722 exists in WP as draft: Pet Insurance UK - Methodology & Trust Framework",WordPress page_id=3722,N/A
+3-Pet Insurance,Live publishing blocked,PASS,OK,"Page 3722 confirmed DRAFT status. WP drafts are not indexable (noindex). approval_status = red_flag.",WordPress + mission_control.json,N/A
+3-Pet Insurance,Affiliate links blocked,PASS,OK,"0 affiliate links on insurance page. RED gate check RED-02 confirms. Mission explicitly states NO affiliate links until compliance review.",Phase8_PetInsurance_RED_Gate.csv RED-02,N/A
+3-Pet Insurance,Visible approval queue item,PARTIAL,LOW,"approval_status=red_flag visible in mission data. No separate approval queue endpoint - status tracked in mission itself.",API: /api/mission-control/missions,Consider dedicated approval queue
+4-CoPilot,show active missions,PASS,OK,"Returns all 6 missions with status/progress/confidence. Read-only.",API: /api/copilot/ask,N/A
+4-CoPilot,what mission matters most?,PASS,OK,"Returns Dog Food Authority Expansion (highest priority, 78.5% confidence). Read-only.",API: /api/copilot/ask,N/A
+4-CoPilot,what should we publish next?,PASS (FIXED),CRITICAL,"Was recommending Dog Insurance UK Brief from RED-gated mission. Now filters out red_flag missions. Returns Harness Product Schema instead.",copilot_mission_commands.py _handle_next_publish,Fixed this session
+4-CoPilot,what is blocking Dog Food authority?,PASS,OK,"Returns 5 pending milestones correctly. Read-only.",API: /api/copilot/ask,N/A
+4-CoPilot,what content does Dog Food mission need?,PASS,OK,"Returns 8 content assets + 4 evidence assets correctly.",API: /api/copilot/ask,N/A
+4-CoPilot,create next action plan,PASS,OK,"Returns prioritised plan. Pet Insurance correctly shows 'Await red-flag approval'. Read-only.",API: /api/copilot/ask,N/A
+4-CoPilot,summarize mission progress,PASS,OK,"Returns all 6 missions with avg progress 11.8%, avg confidence 65.2%. Read-only.",API: /api/copilot/ask,N/A
+5-Social,Facebook status,PASS,OK,"AMBER, autonomy_level=3, api_health=not_connected (token in config but FB Graph API not actively tested), can_auto_post=false, approval_required=true, retry_queue=0",API port 8103: /api/social/channels/facebook,N/A
+5-Social,Instagram status,PASS,OK,"RED, autonomy_level=2, api_health=degraded_meta_review_pending, status=degraded, auto-posting blocked, approval_required=true",API port 8103: /api/social/channels/instagram,N/A
+5-Social,TikTok status,PASS,OK,"RED, not_connected, drafts and scripts only, auto-posting blocked",API port 8103: /api/social/channels/tiktok,N/A
+5-Social,Pinterest status,PASS,OK,"RED, not_connected, pin drafts only, auto-posting blocked",API port 8103: /api/social/channels/pinterest,N/A
+5-Social,YouTube status,PASS,OK,"RED, not_connected, scripts and briefs only, auto-posting blocked",API port 8103: /api/social/channels/youtube_shorts,N/A
+5-Social,Last successful post per channel,INFO,LOW,"All channels: last_successful_post = null. No posts have been made yet.",API port 8103: /api/social/channels,Expected - channels not fully connected
+5-Social,Retry queue,PASS,OK,"0 pending, 0 total. Clean queue.",API port 8103: /api/retry-queue,N/A
+5-Social,DLQ entries,PASS,OK,"4 entries total: 1 escalated (seo_agent), 2 dismissed (content_agent + social_agent), 1 pending (manager_agent). All from integration testing.",API: /api/dlq/stats,N/A
+5-Social,Instagram degraded state,PASS,OK,"status=degraded, degraded_reason='Meta API review pending', auto-posting correctly blocked",API port 8103: /api/social/channels/instagram,N/A
+5-Social,Auto-posting blocked on degraded,PASS,OK,"can_auto_post=false for ALL channels. Facebook blocked due to 'API not connected'. Others blocked due to RED/degraded state.",API port 8103: /api/social/channels/*/can-post,N/A
+6-Affiliate,Pages scanned,PASS,OK,"25 pages scanned by affiliate agent",API port 8107: /api/status,N/A
+6-Affiliate,Pages with affiliate links,PASS,OK,"15 pages with affiliate links, 142 links found total",API port 8107: /api/status,N/A
+6-Affiliate,Pages with disclosure,FAIL,MEDIUM,"Agent reports 5/15 pages have disclosure. WP source confirms 17/17 have disclosure div. Agent scan logic not detecting disclosure divs correctly.",API port 8107: /api/compliance vs WordPress source,Agent scan logic needs update
+6-Affiliate,Links with rel=sponsored,FAIL,MEDIUM,"Agent reports 142 links missing rel=sponsored. WP source HTML confirms all 141 external links DO have rel=sponsored. Agent scan reads WP differently from actual source.",API port 8107: /api/compliance,Agent scan logic needs update
+6-Affiliate,Duplicate tracking warning,PASS,OK,"No duplicate tracking scripts found (confirmed in WP source scan)",affiliate_source_sample.txt,N/A
+7-Product Evidence,Register contains real entries,PASS,OK,"10 real product entries: Royal Canin, James Wellbeloved, Lily's Kitchen, Harringtons, Forthglade, Butcher's, Burns, Orijen etc.",product_evidence_register.json,N/A
+7-Product Evidence,Entries linked to Dog Food pages,PASS,OK,"All 10 entries linked to Dog Food draft pages (3715/3717/3719/3720). No Cat Toys links (none created yet).",product_evidence_register.json - linked_pages field,N/A
+7-Product Evidence,Prices/ratings/stock blocked if unverified,PASS,OK,"All 10 entries: evidence_status=partial, approval_status=blocked_pending_evidence, price/rating/stock_verification=not_verified. risk_flags and unverified_claims lists populated.",product_evidence_register.json,N/A
+8-NOC,NaN timestamps,PASS,OK,"grep found 0 NaN in mission_control.json and dead_letter_queue.json. All timestamps valid ISO 8601.",Direct file grep,N/A
+8-NOC,Event bus status,FAIL,LOW,"Returns empty {} - no meaningful status data from event bus API",API: /api/events/status,Needs event bus health endpoint
+8-NOC,Kill switch status,FAIL,MEDIUM,"No /api/kill-switch/status endpoint found on manager agent. Kill switch module exists in code but no API route registered.",Manager agent API,Needs route registration
+8-NOC,Recovery drill status,FAIL,LOW,"No /api/recovery/status endpoint. Drill was run manually and passed (64ms RTO).",Manager agent API,Consider adding status endpoint
+8-NOC,DLQ status,PASS,OK,"DLQ API fully functional: stats + entries + lifecycle operations all working. 4 entries with valid statuses.",API: /api/dlq/stats,N/A
+8-NOC,PostgreSQL pool status,PASS,OK,"PostgreSQL active (systemctl is-active = active)",systemctl status,N/A
+8-NOC,Redis status,PASS,OK,"Redis responding (PING=PONG), 1.5M memory used",redis-cli ping + info memory,N/A
+8-NOC,Google/GSC/GA4 labels,PASS,OK,"All missions labelled MODELLED FORECAST. No credentials directory = NOT CONNECTED. Clearly labelled.",mission_control.json + filesystem check,N/A
+8-NOC,Contradictory healthy/down states,PASS,OK,"No contradictions found. All 9 services active. Social channels correctly show degraded where appropriate.",systemctl + API checks,N/A
+8-NOC,Backup status,PARTIAL,HIGH,"May 25 backup: OK (766K .gpg file). May 26 03:00 backup: INCOMPLETE (log shows only 2 steps, no .gpg file, staging dir left over). Manual backup also fails (permission denied on live_intelligence.json).",/opt/pethub-agents/backups/,Needs backup script permission fix
